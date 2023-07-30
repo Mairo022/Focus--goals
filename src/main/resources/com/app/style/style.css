@@ -1,0 +1,316 @@
+* {
+    -fx-text-fill: #FEFEFE;
+}
+
+.toggle-button {
+    -fx-background-insets: 0;
+}
+
+.root {
+    -fx-background-color: #272e32;
+}
+
+.navbar {
+    -fx-padding: 18px 0 0 0;
+}
+
+.navbar__button {
+    -fx-padding: 0 0 9px 0;
+    -fx-background: transparent;
+    -fx-fill: #FEFEFE;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-border-style: solid;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 0;
+}
+
+.navbar__button__text {
+    -fx-font-family: "Noto Sans Georgian";
+    -fx-font-weight: 600;
+    -fx-font-size: 15px;
+    -fx-fill: #FEFEFE;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-cursor: hand
+}
+
+.navbar__button:hover {
+    -fx-text-fill: #FfFfFf;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.11), 3, 0.5, 0, 1);
+    -fx-border-width: 0 0 2 0;
+}
+
+.navbar__button:selected {
+    -fx-border-width: 0 0 2 0; /* top right bottom left */
+}
+
+.content {
+    -fx-padding: 15px 30px 0 30px;
+}
+
+.routines {
+
+}
+
+.plans {
+    -fx-hgap: 15px;
+    -fx-vgap: 5px;
+    -fx-vgrow: always;
+}
+
+.plans__add {
+    -fx-background-color: transparent;
+    -fx-font-size: 13.5px;
+    -fx-padding: 4px 0;
+    -fx-text-fill: rgba(255, 255, 255, 0.43);
+    -fx-cursor: hand;
+}
+
+.plans__add:hover {
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+}
+
+.plans__input {
+    -fx-font-family: "Noto Sans";
+    -fx-text-fill: #D3D3D7EE;
+    -fx-font-size: 13px;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: #D3D3D7;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.plans__plan {
+    -fx-font-size: 13px;
+    -fx-font-family: "Noto Sans";
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: rgba(255, 255, 255, 0.43);
+    -fx-cursor: hand;
+    -fx-padding: 3px 12px;
+}
+
+.plans__plan:hover {
+    -fx-text-fill: rgba(255, 255, 255, 0.675);
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+.plans__plan:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-text-fill: #DCDCE1;
+}
+
+.routines__list {
+    -fx-padding: 15px 0;
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.routines__list > * {
+    -fx-font-family: "Noto Sans";
+}
+
+.routines__list__routine {
+    -fx-alignment: center-left;
+    -fx-vgrow: inherit;
+    -fx-padding: 2px 0;
+}
+
+.routines__list__routine__bulletPoint__text {
+    -fx-fill: #D3D3D7;
+}
+
+.routines__list__routine__activity {
+    -fx-wrap-text: true;
+    -fx-padding: 0 7px 0 15px;
+}
+
+.routines__list__routine__activity__text {
+    -fx-font-size: 13.5px;
+    -fx-fill: #D3D3D7;
+    -fx-cursor: hand;
+}
+
+.routines__list__routine:hover .routines__activities__activity__text {
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.11), 3, 0.4, 0, 1);
+}
+
+.routines__list__routine__delete {
+    -fx-background-color: #6C2A2A;
+    -fx-cursor: hand;
+    -fx-padding: 1px 8px;
+    -fx-font-size: 1px;
+}
+
+.routines__list__routine__delete:hover {
+    -fx-background-color: #AC2A2A;
+}
+
+.routines__list__routine__delete__text {
+    -fx-translate-y: 0;
+    -fx-font-size: 11px;
+    -fx-fill: #D3D3D7;
+}
+
+.routines__list__routine__input {
+    -fx-padding: 0 7px 0 15px;
+}
+
+.routines__list__routine__input__field {
+    -fx-text-fill: #EEE;
+    -fx-font-size: 13.5px;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: #D3D3D7;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.footer {
+    -fx-alignment: center;
+    -fx-pref-width: 100%;
+    -fx-pref-height: 80px;
+    -fx-translate-x: -30px;
+    -fx-padding: 0 -60px 0 0;
+}
+
+.footer__add {
+    -fx-pref-width: 100%;
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-border-color: rgba(0, 0, 0, 0.5);
+    -fx-border-width: 0 0 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0);
+    -fx-cursor: hand;
+}
+
+.footer__add:hover {
+    -fx-background-color: rgba(0, 0, 30, 0.07);
+}
+
+.footer {
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.1), 10, 0.5, 0, 0);
+}
+
+.tasks {
+    -fx-padding: 0 0 15px 0;
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.tasks__list {
+    -fx-spacing: 7px;
+}
+
+.tasks__list__task {
+    -fx-padding: 5px 12px;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 5px;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+.tasks__list__task: hover {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
+
+.tasks__list__task:hover .tasks__list__task__name {
+    -fx-fill: #F9F9F9;
+}
+
+.tasks__list__task__name {
+    -fx-font-size: 14px;
+    -fx-fill: #D3D3D7;
+}
+
+.tasks__list__task__delete {
+    -fx-min-height: 15px;
+    -fx-max-height: 15px;
+    -fx-min-width: 20px;
+    -fx-max-width: 20px;
+    -fx-alignment: center;
+    -fx-background-color: #6C2A2A;
+    -fx-alignment: center;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.tasks__list__task__delete__text {
+    -fx-alignment: center;
+    -fx-fill: white;
+}
+
+.tasks__list__task__delete:hover {
+    -fx-background-color: #AC2A2A;
+}
+
+.tasks__list__task__input {
+    -fx-min-width: 50%;
+    -fx-font-size: 13.5px;
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: #D3D3D7;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.timer__stages {
+    -fx-spacing: 10px;
+}
+
+.timer__stages__stage {
+    -fx-cursor: hand;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+}
+
+.timer__stages__stage:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
+
+.timer__stages__stage:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.55);
+}
+
+.timer__time {
+    -fx-padding: 12px;
+}
+
+.timer__controls {
+    -fx-spacing: 10px;
+}
+
+.timer__controls__button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 8px;
+    -fx-cursor: hand;
+}
+
+.timer__controls__button__svg {
+    -fx-fill: #b5b5b7;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.timer__controls__button:hover .timer__controls__button__svg {
+    -fx-fill: #c9c9cb;
+}
+
+.timerDialog {
+    -fx-background-color: #272e32;
+}
+
+.timerDialog__item {
+    -fx-padding: 5px 0;
+}
+
+.timerDialog__item__label {
+    -fx-padding: 0 0 3px 0;
+}
+
+.timerDialog__item__input {
+    -fx-font-size: 13px;
+    -fx-text-fill: #272e32;
+    -fx-background-color: #FEFEFE;
+}
+/* Default style */
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: transparent;
+}

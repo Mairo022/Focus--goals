@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="590.0" prefWidth="510.0" styleClass="content" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controller.TasksController">
+    <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" minViewportWidth="100.0" prefHeight="465.0" prefWidth="397.0" styleClass="tasks" VBox.vgrow="ALWAYS">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <content>
+            <VBox fx:id="tasksList" prefHeight="200.0" prefWidth="100.0" styleClass="tasks__list" />
+         </content>
+      </ScrollPane>
+      <HBox styleClass="footer">
+         <children>
+            <Button fx:id="tasksAdd" alignment="CENTER" layoutX="235.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addNewTask" prefHeight="95.0" styleClass="footer__add" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <Text fill="#e8e8e8" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="footer__add__text" text="+" textAlignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</VBox>

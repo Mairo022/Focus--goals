@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="590.0" prefWidth="510.0" styleClass="content" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.controller.TimerController">
+   <children>
+      <FlowPane fx:id="plans" prefWidth="450.0" styleClass="plans" VBox.vgrow="SOMETIMES" />
+      <VBox alignment="CENTER" prefHeight="194.0" prefWidth="450.0" styleClass="timer" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="450.0">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="timer__stages">
+                     <children>
+                        <ToggleButton fx:id="stageShort" mnemonicParsing="false" styleClass="timer__stages__stage" text="Short">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="timerStage" />
+                           </toggleGroup></ToggleButton>
+                        <ToggleButton fx:id="stageFocus" mnemonicParsing="false" styleClass="timer__stages__stage" text="Focus" toggleGroup="$timerStage" />
+                        <ToggleButton fx:id="stageLong" mnemonicParsing="false" styleClass="timer__stages__stage" text="Long" toggleGroup="$timerStage" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="false" prefWidth="200.0" styleClass="timer__time" VBox.vgrow="NEVER">
+                     <children>
+                        <Text fx:id="timerTime" fill="#f5f5f7" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="timer__time__text" text="20:00">
+                           <font>
+                              <Font name="Noto Sans Medium" size="50.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="timer__controls">
+                     <children>
+                        <Button fx:id="stagePrevious" mnemonicParsing="false" onAction="#prevStage" styleClass="timer__controls__button">
+                           <graphic>
+                              <SVGPath content="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z M16.48 6.13c-.7-.39-.48-.32-7.48 4.07V7a1 1 0 0 0-2 0v10a1 1 0 0 0 2 0v-3.2c7 4.41 6.79 4.46 7.48 4.08S17 18 17 7a1 1 0 0 0-.52-.87zM15 15.2 9.89 12 15 8.8z" styleClass="timer__controls__button__svg" />
+                           </graphic></Button>
+                        <Button mnemonicParsing="false" onAction="#changeState" styleClass="timer__controls__button">
+                           <graphic>
+                              <SVGPath fx:id="playPauseSVG" content="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z M9 16.766V7.234L16.944 12zm2-6v2.468L13.056 12zM12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z M9 16.766V7.234L16.944 12zm2-6v2.468L13.056 12z" styleClass="timer__controls__button__svg" />
+                           </graphic></Button>
+                        <Button fx:id="stageNext" mnemonicParsing="false" onAction="#nextStage" styleClass="timer__controls__button">
+                           <graphic>
+                              <SVGPath content="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z M15 7v3.2C8 5.79 8.21 5.74 7.52 6.13S7 6 7 17a1 1 0 0 0 1 1c.41 0 0 .18 7-4.2V17a1 1 0 0 0 2 0V7a1 1 0 0 0-2 0zm-6 8.2V8.8l5.11 3.2zM12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm0 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10z M15 7v3.2C8 5.79 8.21 5.74 7.52 6.13S7 6 7 17a1 1 0 0 0 1 1c.41 0 0 .18 7-4.2V17a1 1 0 0 0 2 0V7a1 1 0 0 0-2 0zm-6 8.2V8.8l5.11 3.2z" fill="WHITE" styleClass="timer__controls__button__svg" />
+                           </graphic></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
